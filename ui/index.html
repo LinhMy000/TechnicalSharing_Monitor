@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechnicalSharing Monitor - API Testing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TechnicalSharing Monitor - API Testing</h1>
+            <p>Test demo-service endpoints</p>
+        </header>
+
+        <main>
+            <div class="controls">
+                <button id="btn-api1" class="btn btn-primary">API 1 (OK)</button>
+                <button id="btn-api2" class="btn btn-secondary">API 2 (Error)</button>
+                <button id="btn-api3" class="btn btn-tertiary">API 3 (Random)</button>
+            </div>
+
+            <div class="results-container">
+                <div class="result-card">
+                    <h3>API Response</h3>
+                    <div class="status-display" id="status-display">
+                        <div class="status-indicator"></div>
+                        <div class="status-code">Status: </div>
+                        <div class="response-content"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

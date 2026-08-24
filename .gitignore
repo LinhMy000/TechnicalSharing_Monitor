@@ -1,3 +1,4 @@
+node_modules/
 .gradle/
 build/
 !gradle/wrapper/gradle-wrapper.jar
@@ -17,6 +18,7 @@ bin/
 !**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
+.kilo
 .idea
 *.iws
 *.iml

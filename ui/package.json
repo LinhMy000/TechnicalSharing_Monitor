@@ -1,0 +1,20 @@
+{
+  "name": "technical-sharing-monitor-ui",
+  "version": "1.0.0",
+  "description": "Frontend for TechnicalSharing_Monitor API testing",
+  "main": "app.js",
+  "scripts": {
+    "dev": "live-server",
+    "start": "live-server"
+  },
+  "keywords": [
+    "api",
+    "testing",
+    "frontend"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
