@@ -1,0 +1,28 @@
+services:
+  common-service:
+    container_name: common-service
+    build:
+      context: ./common-service
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8080"
+    networks:
+      - app_net
+
+  demo-service:
+    container_name: demo-service
+    build:
+      context: ./demo-17-jar-cloud
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      COMMON_SERVICE_URL: http://common-service:8081
+      LOG_LEVEL: INFO
+    networks:
+      - app_net
+
+
+networks:
+  app_net:
+    driver: bridge

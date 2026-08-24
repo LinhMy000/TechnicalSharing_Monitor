@@ -1,0 +1,12 @@
+server:
+  port: ${SERVER_PORT:8081}
+
+spring:
+  application:
+    name: common-service
+
+logging:
+  level:
+    root: ${LOG_LEVEL:INFO}
+  pattern:
+    console: ${LOG_PATTERN:%d{yyyy-MM-dd HH:mm:ss} ${spring.application.name} %-5level - %logger - %msg%n}
