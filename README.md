@@ -33,3 +33,20 @@ Once running, you can test these endpoints:
 - `GET http://localhost:8080/api3` - Calls common-service random endpoint
 
 
+## Run local without containers
+You can also run the services locally without containers. Make sure you have Java and Maven installed.
+
+### Frontend
+```bash
+node ui/server.js
+```
+```bash
+cd ui
+node server.js
+```
+
+### Backend
+```bash
+cd common-service
+gradlew bootRun
+```

@@ -5,12 +5,12 @@ spring:
   application:
     name: demo-service
 
-#  data:
-#    mongodb:
-#      uri: ${MONGODB_URI:mongodb://localhost:27017/${spring.data.mongodb.database}}
-#      database: ${MONGODB_DATABASE:demo-17-cloud}
-#      auto-index-creation: true
-#      map-key-dot-replacement: "##"
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/${spring.data.mongodb.database}}
+      database: ${MONGODB_DATABASE:demo-17-cloud}
+      auto-index-creation: true
+      map-key-dot-replacement: "##"
 
 api:
   common-service:

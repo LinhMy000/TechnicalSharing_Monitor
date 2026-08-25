@@ -157,7 +157,7 @@ function updateStatus(
 
     if (indicator) {
         if (status === 'loading') {
-            indicator.innerHTML = '<div class="loading"></div>';
+            indicator.innerHTML = '⏳ <div class="loading"></div>';
         } else if (status === 'success') {
             indicator.textContent = '✅';
         } else if (status === 'error') {

@@ -1,4 +1,5 @@
 services:
+
   common-service:
     container_name: common-service
     build:
@@ -28,8 +29,12 @@ services:
     container_name: ui
     ports:
       - "3000:3000"
+    environment:
+       DEMO_SERVICE_HOST: demo-service
+#      DEMO_SERVICE_HOST: localhost
     networks:
       - app_net
+
 
 networks:
   app_net:

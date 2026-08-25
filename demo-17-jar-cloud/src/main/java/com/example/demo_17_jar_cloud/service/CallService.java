@@ -2,6 +2,7 @@ package com.example.demo_17_jar_cloud.service;
 
 import com.example.demo_17_jar_cloud.model.ApiProperties;
 import com.example.demo_17_jar_cloud.model.User;
+import com.example.demo_17_jar_cloud.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,7 @@ public class CallService {
 
     private final ApiProperties apiProperties;
     private final RestClient restClient;
+    private final UserRepository userRepository;
 
     public String callOkEndpoint() {
         String url = apiProperties.getUrl() + "/ok";
@@ -48,10 +50,16 @@ public class CallService {
     }
 
     private List<User> getUsers() {
-        return Arrays.asList(
-                User.builder().id("1").name("Alice").build(),
-                User.builder().id("2").name("Bob Whale").build(),
-                User.builder().id("3").name("Charlie").build()
-        );
+        var users = userRepository.findAll();
+        if (users.isEmpty()) {
+            log.warn("No USER found in the database.");
+            users = Arrays.asList(
+                    User.builder().id("1").name("Alice").build(),
+                    User.builder().id("2").name("Bob Gosh Whale").build(),
+                    User.builder().id("3").name("Charles Liz").build()
+            );
+            userRepository.saveAll(users);
+        }
+        return users;
     }
 }

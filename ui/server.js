@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
     // Proxy API requests to demo-service
     if (req.url.startsWith('/api')) {
         const options = {
-            hostname: 'demo-service',
+            hostname: process.env.DEMO_SERVICE_HOST || 'localhost',
             port: 8080,
             path: req.url,
             method: req.method,
