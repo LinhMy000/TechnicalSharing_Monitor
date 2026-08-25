@@ -34,7 +34,7 @@ Once running, you can test these endpoints:
 
 
 ## Run local without containers
-You can also run the services locally without containers. Make sure you have Java and Maven installed.
+You can also run the services locally without containers. Make sure you have Java and Node installed.
 
 ### Frontend
 ```bash
